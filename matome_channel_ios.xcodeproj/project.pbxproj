@@ -3,20 +3,48 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B8674441EFFD97200F49677 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8674431EFFD96E00F49677 /* AlamofireImage.framework */; };
+		4B8674461EFFDF6C00F49677 /* ShowBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8674451EFFDF6C00F49677 /* ShowBoardViewController.swift */; };
+		4B8674481EFFE3FE00F49677 /* CommentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8674471EFFE3FE00F49677 /* CommentCellView.swift */; };
+		4B86744A1EFFE46100F49677 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8674491EFFE46100F49677 /* Comment.swift */; };
+		4B86744F1F00038F00F49677 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86744E1F00038E00F49677 /* Category.swift */; };
+		4B8674581F00072800F49677 /* Website.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8674571F00072800F49677 /* Website.swift */; };
+		4B86745A1F00073200F49677 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8674591F00073200F49677 /* Image.swift */; };
+		4B86745C1F00144100F49677 /* BoardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86745B1F00144100F49677 /* BoardImage.swift */; };
+		4B86745E1F00145500F49677 /* BoardWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86745D1F00145500F49677 /* BoardWebsite.swift */; };
+		4B8674601F0049FD00F49677 /* CommentImageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86745F1F0049FD00F49677 /* CommentImageCellView.swift */; };
 		4B9814CE1EFD1DDB00945F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9814CD1EFD1DDB00945F5F /* AppDelegate.swift */; };
-		4B9814D01EFD1DDB00945F5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9814CF1EFD1DDB00945F5F /* ViewController.swift */; };
+		4B9814D01EFD1DDB00945F5F /* BoardListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9814CF1EFD1DDB00945F5F /* BoardListController.swift */; };
 		4B9814D31EFD1DDB00945F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9814D11EFD1DDB00945F5F /* Main.storyboard */; };
 		4B9814D51EFD1DDB00945F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B9814D41EFD1DDB00945F5F /* Assets.xcassets */; };
 		4B9814D81EFD1DDB00945F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9814D61EFD1DDB00945F5F /* LaunchScreen.storyboard */; };
 		4B9814E31EFD1DDB00945F5F /* matome_channel_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9814E21EFD1DDB00945F5F /* matome_channel_iosTests.swift */; };
 		4B9814EE1EFD1DDB00945F5F /* matome_channel_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9814ED1EFD1DDB00945F5F /* matome_channel_iosUITests.swift */; };
+		4BD180F81EFDC1BB000A4194 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD180F71EFDC1BB000A4194 /* AlamofireObjectMapper.framework */; };
+		4BD180FA1EFEEE8A000A4194 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD180F91EFEEE8A000A4194 /* Board.swift */; };
+		4BD180FC1EFEEE9A000A4194 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD180FB1EFEEE9A000A4194 /* Pagination.swift */; };
+		4BF546551EFD239E0083D100 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF5464C1EFD237F0083D100 /* Alamofire.framework */; };
+		4BF546591EFD23CD0083D100 /* MatomeChannelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF546581EFD23CD0083D100 /* MatomeChannelAPI.swift */; };
+		4BF5466C1EFD9EF10083D100 /* BoardListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5466B1EFD9EF10083D100 /* BoardListCellView.swift */; };
+		4BF546791EFDA20D0083D100 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF546781EFDA20D0083D100 /* ObjectMapper.framework */; };
+		4BF5467D1EFDA6C70083D100 /* BoardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF5467C1EFDA6C70083D100 /* BoardList.swift */; };
+		8637708C5FBAF52DB140DFCB /* Pods_matome_channel_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C242F0FDDC6B63CBF8F08048 /* Pods_matome_channel_iosUITests.framework */; };
+		978151F83F865F6B3982F0A2 /* Pods_matome_channel_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED69EA366FECC813937F3A6 /* Pods_matome_channel_ios.framework */; };
+		D2ED2F70A32E953776BBB60C /* Pods_matome_channel_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64655B65EEA13E2B23F48799 /* Pods_matome_channel_iosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4B8674421EFFD96E00F49677 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BF546431EFD237F0083D100 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 072236DF124C8A1AAA0726C8B87E1CFC;
+			remoteInfo = AlamofireImage;
+		};
 		4B9814DF1EFD1DDB00945F5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4B9814C21EFD1DDB00945F5F /* Project object */;
@@ -31,12 +59,65 @@
 			remoteGlobalIDString = 4B9814C91EFD1DDB00945F5F;
 			remoteInfo = matome_channel_ios;
 		};
+		4BD180F61EFDC1BB000A4194 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BF546431EFD237F0083D100 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81B984BE0BBD94C412AB47D0AC3195EE;
+			remoteInfo = AlamofireObjectMapper;
+		};
+		4BF5464B1EFD237F0083D100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BF546431EFD237F0083D100 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BE266695700642FB8CC37E1A6AECE68;
+			remoteInfo = Alamofire;
+		};
+		4BF5464F1EFD237F0083D100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BF546431EFD237F0083D100 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B353F15B62A670B8CAE089756E210C1;
+			remoteInfo = "Pods-matome_channel_ios";
+		};
+		4BF546511EFD237F0083D100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BF546431EFD237F0083D100 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06CEF5A3BCFDAB1D90F27443AA6BD0DA;
+			remoteInfo = "Pods-matome_channel_iosTests";
+		};
+		4BF546531EFD237F0083D100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BF546431EFD237F0083D100 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F91B4FC1221C4C2C14272F3406688AC;
+			remoteInfo = "Pods-matome_channel_iosUITests";
+		};
+		4BF546771EFDA20D0083D100 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BF546431EFD237F0083D100 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB2115B3D06D007E76CE6727A07AC480;
+			remoteInfo = ObjectMapper;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251DB06517875DB8C45D3AAE /* Pods-matome_channel_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_ios/Pods-matome_channel_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		3C56A05DE997EE1C020941C1 /* Pods-matome_channel_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_iosTests/Pods-matome_channel_iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		4B8674451EFFDF6C00F49677 /* ShowBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowBoardViewController.swift; sourceTree = "<group>"; };
+		4B8674471EFFE3FE00F49677 /* CommentCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCellView.swift; sourceTree = "<group>"; };
+		4B8674491EFFE46100F49677 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		4B86744E1F00038E00F49677 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		4B8674571F00072800F49677 /* Website.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Website.swift; sourceTree = "<group>"; };
+		4B8674591F00073200F49677 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		4B86745B1F00144100F49677 /* BoardImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardImage.swift; sourceTree = "<group>"; };
+		4B86745D1F00145500F49677 /* BoardWebsite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardWebsite.swift; sourceTree = "<group>"; };
+		4B86745F1F0049FD00F49677 /* CommentImageCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentImageCellView.swift; sourceTree = "<group>"; };
 		4B9814CA1EFD1DDB00945F5F /* matome_channel_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = matome_channel_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9814CD1EFD1DDB00945F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B9814CF1EFD1DDB00945F5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B9814CF1EFD1DDB00945F5F /* BoardListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListController.swift; sourceTree = "<group>"; usesTabs = 0; };
 		4B9814D21EFD1DDB00945F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B9814D41EFD1DDB00945F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B9814D71EFD1DDB00945F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +128,19 @@
 		4B9814E91EFD1DDB00945F5F /* matome_channel_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = matome_channel_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9814ED1EFD1DDB00945F5F /* matome_channel_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matome_channel_iosUITests.swift; sourceTree = "<group>"; };
 		4B9814EF1EFD1DDB00945F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BD180F91EFEEE8A000A4194 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		4BD180FB1EFEEE9A000A4194 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		4BF546431EFD237F0083D100 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		4BF546581EFD23CD0083D100 /* MatomeChannelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatomeChannelAPI.swift; path = "/Users/tanimoto/Working/m-ch/matome_channel_ios/matome_channel_ios/lib/MatomeChannelAPI.swift"; sourceTree = "<absolute>"; };
+		4BF5466B1EFD9EF10083D100 /* BoardListCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardListCellView.swift; path = "/Users/tanimoto/Working/m-ch/matome_channel_ios/matome_channel_ios/view/BoardListCellView.swift"; sourceTree = "<absolute>"; };
+		4BF5467C1EFDA6C70083D100 /* BoardList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoardList.swift; path = "/Users/tanimoto/Working/m-ch/matome_channel_ios/matome_channel_ios/model/BoardList.swift"; sourceTree = "<absolute>"; };
+		64655B65EEA13E2B23F48799 /* Pods_matome_channel_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_matome_channel_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6722727F8B5E3A95DB3D0896 /* Pods-matome_channel_iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_iosUITests/Pods-matome_channel_iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8ED69EA366FECC813937F3A6 /* Pods_matome_channel_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_matome_channel_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC531A7FA0496DD7D16D624 /* Pods-matome_channel_iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_iosTests/Pods-matome_channel_iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C242F0FDDC6B63CBF8F08048 /* Pods_matome_channel_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_matome_channel_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCAE29A2708F8E78B58D71EF /* Pods-matome_channel_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_ios/Pods-matome_channel_ios.release.xcconfig"; sourceTree = "<group>"; };
+		D720E99E67AD93E813E2371F /* Pods-matome_channel_iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_iosUITests/Pods-matome_channel_iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +148,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8674441EFFD97200F49677 /* AlamofireImage.framework in Frameworks */,
+				4BD180F81EFDC1BB000A4194 /* AlamofireObjectMapper.framework in Frameworks */,
+				4BF546791EFDA20D0083D100 /* ObjectMapper.framework in Frameworks */,
+				4BF546551EFD239E0083D100 /* Alamofire.framework in Frameworks */,
+				978151F83F865F6B3982F0A2 /* Pods_matome_channel_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2ED2F70A32E953776BBB60C /* Pods_matome_channel_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +168,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8637708C5FBAF52DB140DFCB /* Pods_matome_channel_iosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		409FE474C89B7D503266DE15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BF546431EFD237F0083D100 /* Pods.xcodeproj */,
+				8ED69EA366FECC813937F3A6 /* Pods_matome_channel_ios.framework */,
+				64655B65EEA13E2B23F48799 /* Pods_matome_channel_iosTests.framework */,
+				C242F0FDDC6B63CBF8F08048 /* Pods_matome_channel_iosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B86744C1F00021700F49677 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5466B1EFD9EF10083D100 /* BoardListCellView.swift */,
+				4B86745F1F0049FD00F49677 /* CommentImageCellView.swift */,
+				4B9814CF1EFD1DDB00945F5F /* BoardListController.swift */,
+				4B8674471EFFE3FE00F49677 /* CommentCellView.swift */,
+				4B8674451EFFDF6C00F49677 /* ShowBoardViewController.swift */,
+			);
+			name = view;
+			path = "/Users/tanimoto/Working/m-ch/matome_channel_ios/matome_channel_ios/view";
+			sourceTree = "<absolute>";
+		};
 		4B9814C11EFD1DDB00945F5F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +206,8 @@
 				4B9814E11EFD1DDB00945F5F /* matome_channel_iosTests */,
 				4B9814EC1EFD1DDB00945F5F /* matome_channel_iosUITests */,
 				4B9814CB1EFD1DDB00945F5F /* Products */,
+				9C52AF458E3DAE328B359566 /* Pods */,
+				409FE474C89B7D503266DE15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +224,10 @@
 		4B9814CC1EFD1DDB00945F5F /* matome_channel_ios */ = {
 			isa = PBXGroup;
 			children = (
+				4B86744C1F00021700F49677 /* view */,
+				4BF5466D1EFDA1410083D100 /* model */,
+				4BF546571EFD23B10083D100 /* lib */,
 				4B9814CD1EFD1DDB00945F5F /* AppDelegate.swift */,
-				4B9814CF1EFD1DDB00945F5F /* ViewController.swift */,
 				4B9814D11EFD1DDB00945F5F /* Main.storyboard */,
 				4B9814D41EFD1DDB00945F5F /* Assets.xcassets */,
 				4B9814D61EFD1DDB00945F5F /* LaunchScreen.storyboard */,
@@ -125,6 +254,57 @@
 			path = matome_channel_iosUITests;
 			sourceTree = "<group>";
 		};
+		4BF546441EFD237F0083D100 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5464C1EFD237F0083D100 /* Alamofire.framework */,
+				4B8674431EFFD96E00F49677 /* AlamofireImage.framework */,
+				4BD180F71EFDC1BB000A4194 /* AlamofireObjectMapper.framework */,
+				4BF546781EFDA20D0083D100 /* ObjectMapper.framework */,
+				4BF546501EFD237F0083D100 /* Pods_matome_channel_ios.framework */,
+				4BF546521EFD237F0083D100 /* Pods_matome_channel_iosTests.framework */,
+				4BF546541EFD237F0083D100 /* Pods_matome_channel_iosUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BF546571EFD23B10083D100 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				4BF546581EFD23CD0083D100 /* MatomeChannelAPI.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		4BF5466D1EFDA1410083D100 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4BF5467C1EFDA6C70083D100 /* BoardList.swift */,
+				4B86744E1F00038E00F49677 /* Category.swift */,
+				4BD180F91EFEEE8A000A4194 /* Board.swift */,
+				4B86745B1F00144100F49677 /* BoardImage.swift */,
+				4B86745D1F00145500F49677 /* BoardWebsite.swift */,
+				4B8674571F00072800F49677 /* Website.swift */,
+				4B8674591F00073200F49677 /* Image.swift */,
+				4BD180FB1EFEEE9A000A4194 /* Pagination.swift */,
+				4B8674491EFFE46100F49677 /* Comment.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9C52AF458E3DAE328B359566 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				251DB06517875DB8C45D3AAE /* Pods-matome_channel_ios.debug.xcconfig */,
+				CCAE29A2708F8E78B58D71EF /* Pods-matome_channel_ios.release.xcconfig */,
+				ACC531A7FA0496DD7D16D624 /* Pods-matome_channel_iosTests.debug.xcconfig */,
+				3C56A05DE997EE1C020941C1 /* Pods-matome_channel_iosTests.release.xcconfig */,
+				6722727F8B5E3A95DB3D0896 /* Pods-matome_channel_iosUITests.debug.xcconfig */,
+				D720E99E67AD93E813E2371F /* Pods-matome_channel_iosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +312,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B9814F21EFD1DDB00945F5F /* Build configuration list for PBXNativeTarget "matome_channel_ios" */;
 			buildPhases = (
+				F1AC4266871F83F947478796 /* [CP] Check Pods Manifest.lock */,
 				4B9814C61EFD1DDB00945F5F /* Sources */,
 				4B9814C71EFD1DDB00945F5F /* Frameworks */,
 				4B9814C81EFD1DDB00945F5F /* Resources */,
+				C97ACEB1A7CC274014381412 /* [CP] Embed Pods Frameworks */,
+				EFBA907EDD983B3F12132988 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +332,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B9814F51EFD1DDB00945F5F /* Build configuration list for PBXNativeTarget "matome_channel_iosTests" */;
 			buildPhases = (
+				EC0AD69FD70884EE28B3EF91 /* [CP] Check Pods Manifest.lock */,
 				4B9814DA1EFD1DDB00945F5F /* Sources */,
 				4B9814DB1EFD1DDB00945F5F /* Frameworks */,
 				4B9814DC1EFD1DDB00945F5F /* Resources */,
+				EB96ED177435B41F23B66FFD /* [CP] Embed Pods Frameworks */,
+				1CC77733F9815B52E3D44B7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +353,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B9814F81EFD1DDB00945F5F /* Build configuration list for PBXNativeTarget "matome_channel_iosUITests" */;
 			buildPhases = (
+				A698497A7C47C9BA7BE5F6B0 /* [CP] Check Pods Manifest.lock */,
 				4B9814E51EFD1DDB00945F5F /* Sources */,
 				4B9814E61EFD1DDB00945F5F /* Frameworks */,
 				4B9814E71EFD1DDB00945F5F /* Resources */,
+				2035EF9A58380E8782CBA3EE /* [CP] Embed Pods Frameworks */,
+				6C6AF2BC2FB5B14CBA91CC93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,7 +397,7 @@
 				};
 			};
 			buildConfigurationList = 4B9814C51EFD1DDB00945F5F /* Build configuration list for PBXProject "matome_channel_ios" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -218,6 +407,12 @@
 			mainGroup = 4B9814C11EFD1DDB00945F5F;
 			productRefGroup = 4B9814CB1EFD1DDB00945F5F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4BF546441EFD237F0083D100 /* Products */;
+					ProjectRef = 4BF546431EFD237F0083D100 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4B9814C91EFD1DDB00945F5F /* matome_channel_ios */,
@@ -226,6 +421,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4B8674431EFFD96E00F49677 /* AlamofireImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireImage.framework;
+			remoteRef = 4B8674421EFFD96E00F49677 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4BD180F71EFDC1BB000A4194 /* AlamofireObjectMapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireObjectMapper.framework;
+			remoteRef = 4BD180F61EFDC1BB000A4194 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4BF5464C1EFD237F0083D100 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 4BF5464B1EFD237F0083D100 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4BF546501EFD237F0083D100 /* Pods_matome_channel_ios.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_matome_channel_ios.framework;
+			remoteRef = 4BF5464F1EFD237F0083D100 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4BF546521EFD237F0083D100 /* Pods_matome_channel_iosTests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_matome_channel_iosTests.framework;
+			remoteRef = 4BF546511EFD237F0083D100 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4BF546541EFD237F0083D100 /* Pods_matome_channel_iosUITests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_matome_channel_iosUITests.framework;
+			remoteRef = 4BF546531EFD237F0083D100 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4BF546781EFDA20D0083D100 /* ObjectMapper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ObjectMapper.framework;
+			remoteRef = 4BF546771EFDA20D0083D100 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4B9814C81EFD1DDB00945F5F /* Resources */ = {
@@ -254,13 +501,183 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CC77733F9815B52E3D44B7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-matome_channel_iosTests/Pods-matome_channel_iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2035EF9A58380E8782CBA3EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-matome_channel_iosUITests/Pods-matome_channel_iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C6AF2BC2FB5B14CBA91CC93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-matome_channel_iosUITests/Pods-matome_channel_iosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A698497A7C47C9BA7BE5F6B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-matome_channel_iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C97ACEB1A7CC274014381412 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-matome_channel_ios/Pods-matome_channel_ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-matome_channel_ios/Pods-matome_channel_ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB96ED177435B41F23B66FFD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-matome_channel_iosTests/Pods-matome_channel_iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC0AD69FD70884EE28B3EF91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-matome_channel_iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFBA907EDD983B3F12132988 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-matome_channel_ios/Pods-matome_channel_ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1AC4266871F83F947478796 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-matome_channel_ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B9814C61EFD1DDB00945F5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B9814D01EFD1DDB00945F5F /* ViewController.swift in Sources */,
+				4B8674461EFFDF6C00F49677 /* ShowBoardViewController.swift in Sources */,
+				4B9814D01EFD1DDB00945F5F /* BoardListController.swift in Sources */,
+				4BF5466C1EFD9EF10083D100 /* BoardListCellView.swift in Sources */,
+				4BD180FA1EFEEE8A000A4194 /* Board.swift in Sources */,
+				4BD180FC1EFEEE9A000A4194 /* Pagination.swift in Sources */,
+				4B86744A1EFFE46100F49677 /* Comment.swift in Sources */,
+				4B8674601F0049FD00F49677 /* CommentImageCellView.swift in Sources */,
+				4B86745A1F00073200F49677 /* Image.swift in Sources */,
+				4B86745E1F00145500F49677 /* BoardWebsite.swift in Sources */,
+				4B8674481EFFE3FE00F49677 /* CommentCellView.swift in Sources */,
 				4B9814CE1EFD1DDB00945F5F /* AppDelegate.swift in Sources */,
+				4BF546591EFD23CD0083D100 /* MatomeChannelAPI.swift in Sources */,
+				4BF5467D1EFDA6C70083D100 /* BoardList.swift in Sources */,
+				4B86744F1F00038F00F49677 /* Category.swift in Sources */,
+				4B86745C1F00144100F49677 /* BoardImage.swift in Sources */,
+				4B8674581F00072800F49677 /* Website.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +827,7 @@
 		};
 		4B9814F31EFD1DDB00945F5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 251DB06517875DB8C45D3AAE /* Pods-matome_channel_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = matome_channel_ios/Info.plist;
@@ -422,6 +840,7 @@
 		};
 		4B9814F41EFD1DDB00945F5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCAE29A2708F8E78B58D71EF /* Pods-matome_channel_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = matome_channel_ios/Info.plist;
@@ -434,6 +853,7 @@
 		};
 		4B9814F61EFD1DDB00945F5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACC531A7FA0496DD7D16D624 /* Pods-matome_channel_iosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,6 +868,7 @@
 		};
 		4B9814F71EFD1DDB00945F5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C56A05DE997EE1C020941C1 /* Pods-matome_channel_iosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +883,7 @@
 		};
 		4B9814F91EFD1DDB00945F5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6722727F8B5E3A95DB3D0896 /* Pods-matome_channel_iosUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = matome_channel_iosUITests/Info.plist;
@@ -475,6 +897,7 @@
 		};
 		4B9814FA1EFD1DDB00945F5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D720E99E67AD93E813E2371F /* Pods-matome_channel_iosUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = matome_channel_iosUITests/Info.plist;
@@ -505,6 +928,7 @@
 				4B9814F41EFD1DDB00945F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B9814F51EFD1DDB00945F5F /* Build configuration list for PBXNativeTarget "matome_channel_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +937,7 @@
 				4B9814F71EFD1DDB00945F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B9814F81EFD1DDB00945F5F /* Build configuration list for PBXNativeTarget "matome_channel_iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +946,7 @@
 				4B9814FA1EFD1DDB00945F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
