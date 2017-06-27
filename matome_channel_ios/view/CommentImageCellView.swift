@@ -8,12 +8,18 @@
 
 import Foundation
 import UIKit
+import AlamofireImage
 
 class CommentImageCellView: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
 
-    func setImage(_ image: Image){
-        let url = URL(string: image.thumbnail_url!)
-        self.image.af_setImage(withURL: url!)
+    var object: HasImageObject?
+
+    func setImage(_ obj: HasImageObject){
+        object = obj
+        let url = URL(string: obj.thumbnail_url!)
+        let size = CGSize(width: 50.0, height: 50.0)
+        let filter = AspectScaledToFitSizeFilter(size: size)
+        self.image.af_setImage(withURL: url!, filter: filter )
     }
 }

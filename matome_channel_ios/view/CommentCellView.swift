@@ -14,12 +14,15 @@ class CommentCellView: UITableViewCell, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var created_at: UILabel!
     @IBOutlet weak var hash_id: UILabel!
-    @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var content: UITextView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var num: UILabel!
     @IBOutlet weak var imageList: UICollectionView!
 
     var comment: Comment?
+    var imageObjects: [HasImageObject] = []
+
+    var constraintHeight: NSLayoutConstraint?
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -40,23 +43,36 @@ class CommentCellView: UITableViewCell, UICollectionViewDelegate, UICollectionVi
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy年MM月dd日 HH時mm分ss秒"
         self.created_at.text = formatter.string(for: comment.created_at)
+        guard let images: [HasImageObject] = self.comment?.images else { return }
+        guard let websites: [HasImageObject] = self.comment?.websites else { return }
+        self.imageObjects = images + websites
+        let count = self.imageObjects.count
+        let height = CGFloat((count > 0) ? 50 : 0)
+        if(constraintHeight != nil){
+            self.imageList.removeConstraint(constraintHeight!)
+        }
+        constraintHeight = NSLayoutConstraint(
+            item: self.imageList,
+            attribute: NSLayoutAttribute.height,
+            relatedBy: NSLayoutRelation.equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.height,
+            multiplier: 1.0,
+            constant: height
+        )
+        self.imageList.addConstraint(constraintHeight!)
         self.imageList.reloadData()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        guard let count = self.comment?.images?.count else {
-            return 0
-        }
-        return count
+        return self.imageObjects.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:CommentImageCellView = collectionView.dequeueReusableCell(
             withReuseIdentifier: "commentImage", for: indexPath) as! CommentImageCellView
-        guard let image: Image = self.comment?.images?[indexPath.row] else {
-            return cell
-        }
+        let image = self.imageObjects[indexPath.row]
         cell.setImage(image)
         return cell
     }

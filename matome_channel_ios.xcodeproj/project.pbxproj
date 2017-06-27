@@ -17,6 +17,7 @@
 		4B86745C1F00144100F49677 /* BoardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86745B1F00144100F49677 /* BoardImage.swift */; };
 		4B86745E1F00145500F49677 /* BoardWebsite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86745D1F00145500F49677 /* BoardWebsite.swift */; };
 		4B8674601F0049FD00F49677 /* CommentImageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B86745F1F0049FD00F49677 /* CommentImageCellView.swift */; };
+		4B8674621F01658800F49677 /* HasImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8674611F01658800F49677 /* HasImage.swift */; };
 		4B9814CE1EFD1DDB00945F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9814CD1EFD1DDB00945F5F /* AppDelegate.swift */; };
 		4B9814D01EFD1DDB00945F5F /* BoardListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9814CF1EFD1DDB00945F5F /* BoardListController.swift */; };
 		4B9814D31EFD1DDB00945F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9814D11EFD1DDB00945F5F /* Main.storyboard */; };
@@ -115,6 +116,7 @@
 		4B86745B1F00144100F49677 /* BoardImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardImage.swift; sourceTree = "<group>"; };
 		4B86745D1F00145500F49677 /* BoardWebsite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardWebsite.swift; sourceTree = "<group>"; };
 		4B86745F1F0049FD00F49677 /* CommentImageCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentImageCellView.swift; sourceTree = "<group>"; };
+		4B8674611F01658800F49677 /* HasImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HasImage.swift; path = ../lib/HasImage.swift; sourceTree = "<group>"; };
 		4B9814CA1EFD1DDB00945F5F /* matome_channel_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = matome_channel_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9814CD1EFD1DDB00945F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B9814CF1EFD1DDB00945F5F /* BoardListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListController.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -279,6 +281,7 @@
 		4BF5466D1EFDA1410083D100 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4B8674611F01658800F49677 /* HasImage.swift */,
 				4BF5467C1EFDA6C70083D100 /* BoardList.swift */,
 				4B86744E1F00038E00F49677 /* Category.swift */,
 				4BD180F91EFEEE8A000A4194 /* Board.swift */,
@@ -675,6 +678,7 @@
 				4B9814CE1EFD1DDB00945F5F /* AppDelegate.swift in Sources */,
 				4BF546591EFD23CD0083D100 /* MatomeChannelAPI.swift in Sources */,
 				4BF5467D1EFDA6C70083D100 /* BoardList.swift in Sources */,
+				4B8674621F01658800F49677 /* HasImage.swift in Sources */,
 				4B86744F1F00038F00F49677 /* Category.swift in Sources */,
 				4B86745C1F00144100F49677 /* BoardImage.swift in Sources */,
 				4B8674581F00072800F49677 /* Website.swift in Sources */,
@@ -830,6 +834,7 @@
 			baseConfigurationReference = 251DB06517875DB8C45D3AAE /* Pods-matome_channel_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7633HTQ229;
 				INFOPLIST_FILE = matome_channel_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xyz.m-ch.matome-channel-ios";
@@ -843,6 +848,7 @@
 			baseConfigurationReference = CCAE29A2708F8E78B58D71EF /* Pods-matome_channel_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7633HTQ229;
 				INFOPLIST_FILE = matome_channel_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "xyz.m-ch.matome-channel-ios";

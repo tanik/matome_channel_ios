@@ -9,21 +9,11 @@
 import Foundation
 import ObjectMapper
 
-public class Website: Mappable {
-    var id: Int?
+public class Website: HasImageObject {
     var title: String?
-    var original_url: String?
-    var full_url: String?
-    var thumbnail_url: String?
     
-    required public init?(map: Map) {
-    }
-    
-    public func mapping(map: Map) {
-        id             <- map["id"]
+    public override func mapping(map: Map) {
+        super.mapping(map: map)
         title          <- map["title"]
-        original_url   <- map["original_url"]
-        full_url       <- map["full_url"]
-        thumbnail_url  <- map["thumbnail_url"]
     }
 }

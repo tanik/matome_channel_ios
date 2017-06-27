@@ -27,6 +27,8 @@ class BoardListCellView: UITableViewCell {
         self.title.text = board.title
         self.first_comment.text = board.first_comment
         let url = URL(string: board.thumbnail_url!)
-        self.thumbnail.af_setImage(withURL: url!)
+        let size = CGSize(width: 50.0, height: 50.0)
+        let filter = AspectScaledToFitSizeFilter(size: size)
+        self.thumbnail.af_setImage(withURL: url!, filter: filter)
     }
 }

@@ -9,22 +9,12 @@
 import Foundation
 import ObjectMapper
 
-public class Image: Mappable {
-    var id: Int?
-    var original_url: String?
-    var full_url: String?
-    var thumbnail_url: String?
+public class Image: HasImageObject {
     var width: Int?
     var height: Int?
     
-    required public init?(map: Map) {
-    }
-    
-    public func mapping(map: Map) {
-        id             <- map["id"]
-        original_url   <- map["original_url"]
-        full_url       <- map["full_url"]
-        thumbnail_url  <- map["thumbnail_url"]
+    public override func mapping(map: Map) {
+        super.mapping(map: map)
         width          <- map["width"]
         height         <- map["height"]
     }
