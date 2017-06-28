@@ -11,13 +11,18 @@ import UIKit
 class BoardListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var boards: [Board] = []
+    var selectedCategory: Category = Category.root
     var selectedBoard: Board? = nil
 
+    @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var boardList: UITableView!
+
+    @IBAction func refresh(_ sender: Any) {
+        print("refresh")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view, typically from a nib.
         getBoards()
         boardList.dataSource = self
@@ -31,16 +36,26 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func getBoards() {
-        MatomeChannelAPI().getBoards(success: { (boardList: BoardList) in
-            self.boards = (boardList.boards)!
-            self.boardList.reloadData()
-        })
+        var params: Dictionary<String, Any> = [:]
+        if let category_id = selectedCategory.id {
+            params = ["category_id": category_id]
+        }
+        self.navBar.title = selectedCategory.name!
+        MatomeChannelAPI().getBoards(params: params,
+            success: { (boardList: BoardList) in
+                self.boards = (boardList.boards)!
+                self.boardList.reloadData()
+            }
+        )
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showBoard" {
             let showBoard: ShowBoardViewController = segue.destination as! ShowBoardViewController
             showBoard.board = selectedBoard!
+        } else if segue.identifier == "category" {
+            let categoryList: CategoryViewController = segue.destination as! CategoryViewController
+            categoryList.selectedCategory = self.selectedCategory
         }
         
     }
