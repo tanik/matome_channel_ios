@@ -13,6 +13,7 @@ class ShowBoardViewController: UIViewController, UITableViewDelegate, UITableVie
 
     var board: Board?
     var comments: [Comment]?
+    var hasMoreComments: Bool = true
 
     @IBOutlet weak var commentList: UITableView!
     @IBOutlet weak var navBar: UINavigationItem!
@@ -45,10 +46,22 @@ class ShowBoardViewController: UIViewController, UITableViewDelegate, UITableVie
         MatomeChannelAPI().getBoard(board_id, success: { (board: Board) in
             self.board = board
             self.comments = board.comments
+            self.hasMoreComments = (board.comments?.last?.num != 1)
             self.commentList.reloadData()
         })
     }
 
+    func getMoreComments(){
+        guard let board_id = board?.id else { return }
+        guard let lt_id = comments?.last?.id else { return }
+        MatomeChannelAPI().getBoardComments(board_id, lt_id: lt_id, success: { (comments: [Comment]) in
+            self.comments = self.comments! + comments
+            self.hasMoreComments = (self.comments?.last?.num != 1)
+            self.commentList.reloadData()
+        })
+    }
+
+    // TableView delegeter
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = comments?.count else{
             return 0
@@ -58,7 +71,7 @@ class ShowBoardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CommentCellView = tableView.dequeueReusableCell(withIdentifier: "comment", for: indexPath as IndexPath) as! CommentCellView
-        guard let comment = self.board?.comments?[indexPath.row] else {
+        guard let comment = self.comments?[indexPath.row] else {
             print("comment not found")
             return cell
         }
@@ -67,5 +80,10 @@ class ShowBoardViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
 
-
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let count = self.comments?.count else { return }
+        if count >= 20 && (count - indexPath.row) == 10 && self.hasMoreComments {
+            getMoreComments()
+        }
+    }
 }

@@ -100,6 +100,18 @@ public class MatomeChannelAPI {
         }
     }
 
+    func getCategories(params : Dictionary<String, Any> = [:],
+                       success: @escaping (_ categories: [Category]) -> Void,
+                       failure: ((_ error : Error) -> Void)? = nil ) -> Void {
+        let mapper = Mapper<Category>()
+        requestArray("/categories",
+                     params: params,
+                     mapper: mapper,
+                     success: success,
+                     failure: failure
+        )
+    }
+
     func getBoards(params : Dictionary<String, Any> = [:],
                    success: @escaping (_ boardList: BoardList) -> Void,
                    failure: ((_ error : Error) -> Void)? = nil ) -> Void {
@@ -125,15 +137,28 @@ public class MatomeChannelAPI {
         )
     }
 
-    func getCategories(params : Dictionary<String, Any> = [:],
-                   success: @escaping (_ categories: [Category]) -> Void,
-                   failure: ((_ error : Error) -> Void)? = nil ) -> Void {
-        let mapper = Mapper<Category>()
-        requestArray("/categories",
-                params: params,
-                mapper: mapper,
-                success: success,
-                failure: failure
+    func getBoardComments(_ board_id: Int,
+                  lt_id: Int? = nil,
+                  gt_id: Int? = nil,
+                  params : Dictionary<String, Any> = [:],
+                  success: @escaping (_ comments: [Comment]) -> Void,
+                  failure: ((_ error : Error) -> Void)? = nil ) -> Void {
+        let mapper = Mapper<Comment>()
+        var url = ""
+        if (lt_id != nil) && (gt_id != nil) {
+            url = "/boards/\(board_id)/comments/gtlt/\(gt_id!)/\(lt_id!)"
+        }else if (gt_id != nil) {
+            url = "/boards/\(board_id)/comments/gt/\(gt_id!)"
+        }else if (lt_id != nil) {
+            url = "/boards/\(board_id)/comments/lt/\(lt_id!)"
+        }else{
+            url = "/boards/\(board_id)/comments"
+        }
+        requestArray(url,
+            params: params,
+            mapper: mapper,
+            success: success,
+            failure: failure
         )
     }
 }
