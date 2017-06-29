@@ -32,7 +32,11 @@
                                                 <segue destination="TSv-2Y-Uft" kind="show" identifier="category" id="Kav-oj-Gz0"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="znG-bW-3eF"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="znG-bW-3eF">
+                                            <connections>
+                                                <action selector="showSearchBar:" destination="BYZ-38-t0r" id="wpb-HD-suV"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -98,24 +102,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar hidden="YES" contentMode="redraw" placeholder="Search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEb-sv-2mz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZJL-28-LpN" secondAttribute="trailing" id="0my-FC-vla"/>
+                            <constraint firstItem="kEb-sv-2mz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="11g-rS-ibE"/>
                             <constraint firstAttribute="trailing" secondItem="DxY-Wi-L8E" secondAttribute="trailing" id="1NZ-8k-ylT"/>
                             <constraint firstItem="DxY-Wi-L8E" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7cP-CB-fBc"/>
                             <constraint firstItem="DxY-Wi-L8E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Fb-Gc-hUL"/>
                             <constraint firstItem="qsm-Zq-xgO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B38-bs-aDC"/>
+                            <constraint firstItem="kEb-sv-2mz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ICS-Dz-axb"/>
                             <constraint firstAttribute="trailing" secondItem="qsm-Zq-xgO" secondAttribute="trailing" id="J8J-wr-i1Q"/>
                             <constraint firstItem="ZJL-28-LpN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RlZ-0R-Bx0"/>
                             <constraint firstItem="qsm-Zq-xgO" firstAttribute="top" secondItem="ZJL-28-LpN" secondAttribute="bottom" id="YJv-kK-qcJ"/>
                             <constraint firstItem="ZJL-28-LpN" firstAttribute="top" secondItem="DxY-Wi-L8E" secondAttribute="bottom" id="gjA-ic-CKK"/>
+                            <constraint firstAttribute="trailing" secondItem="kEb-sv-2mz" secondAttribute="trailing" id="iG8-BE-dzs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qsm-Zq-xgO" secondAttribute="bottom" id="jNO-CJ-8pm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="boardList" destination="ZJL-28-LpN" id="kBd-UQ-Lar"/>
-                        <outlet property="navBar" destination="GCb-us-I2M" id="JsA-lv-6rM"/>
+                        <outlet property="navBar" destination="GCb-us-I2M" id="MkE-S0-3bI"/>
+                        <outlet property="searchBar" destination="kEb-sv-2mz" id="gOg-ej-NRp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

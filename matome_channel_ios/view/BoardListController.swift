@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BoardListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BoardListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     var boards: [Board] = []
     var selectedCategory: Category = Category.root
@@ -16,9 +16,14 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var boardList: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+
+    @IBAction func showSearchBar(_ sender: Any) {
+        self.searchBar.isHidden = false
+    }
 
     @IBAction func refresh(_ sender: Any) {
-        print("refresh")
+        getBoards()
     }
 
     override func viewDidLoad() {
@@ -27,7 +32,7 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
         getBoards()
         boardList.dataSource = self
         boardList.delegate = self
-
+        searchBar.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +43,12 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
     func getBoards() {
         var params: Dictionary<String, Any> = [:]
         if let category_id = selectedCategory.id {
-            params = ["category_id": category_id]
+            params["category_id"] = category_id
+        }
+        if let query = searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines) {
+            if !query.isEmpty {
+                params["q"] = query
+            }
         }
         self.navBar.title = selectedCategory.name!
         MatomeChannelAPI().getBoards(params: params,
@@ -59,7 +69,8 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
     }
-    
+
+    // TableView delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return boards.count
     }
@@ -79,6 +90,15 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.deselectRow(at: indexPath, animated: false)
         
     }
-    
+
+    // Search Bar delegate
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar){
+        self.searchBar.endEditing(true)
+        self.searchBar.isHidden = true
+        getBoards()
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
+        getBoards()
+    }
 }
 
