@@ -22,6 +22,15 @@ class ShowBoardViewController: UIViewController, UITableViewDelegate, UITableVie
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func refresh(_ sender: Any) {
+        guard let board_id = board?.id else { return }
+        guard let gt_id = comments?.first?.id else { return }
+        MatomeChannelAPI().getBoardComments(board_id, gt_id: gt_id, success: { (comments: [Comment]) in
+            self.comments = comments + self.comments!
+            self.commentList.reloadData()
+        })
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navBar.title = board?.title
