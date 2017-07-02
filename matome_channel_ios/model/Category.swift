@@ -10,11 +10,14 @@ import Foundation
 import ObjectMapper
 
 public class Category: Mappable {
-    static public let root: Category = Mapper<Category>().map(JSON: ["name": "総合"])!
+    static public let root: Category = Mapper<Category>().map(
+        JSON: ["name": "総合", "nested_name": "総合"]
+    )!
 
     var id: Int?
     var name: String?
     var parent_id: Int?
+    var nested_name: String?
     
     required public init?(map: Map) {
     }
@@ -23,5 +26,6 @@ public class Category: Mappable {
         id            <- map["id"]
         name          <- map["name"]
         parent_id     <- map["parent_id"]
+        nested_name   <- map["nested_name"]
     }
 }

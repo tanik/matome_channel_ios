@@ -42,21 +42,19 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "category", for: indexPath as IndexPath)
         let category = self.categories[indexPath.row]
-        var name: String = category.name!
-        if (category.parent_id != nil) {
-            if let parent = self.categories.first(where: { cat in cat.id == category.parent_id }) {
-                name = "\(parent.name!) » \(name)"
-            }
-        }
-        cell.textLabel?.text = name
+        cell.textLabel?.text = category.nested_name!
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         selectedCategory = categories[indexPath.row]
-        let boardListView = self.presentingViewController as! BoardListViewController
-        boardListView.selectedCategory = selectedCategory
-        boardListView.getBoards()
+        if ((self.presentingViewController as? BoardListViewController) != nil) {
+            let boardListView = self.presentingViewController as! BoardListViewController
+            boardListView.selectedCategory = selectedCategory
+            boardListView.getBoards()
+        }else{
+            print("not board list")
+        }
         self.dismiss(animated: true, completion: nil)
     }
 }

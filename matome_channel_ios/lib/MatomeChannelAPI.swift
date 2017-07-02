@@ -99,7 +99,9 @@ public class MatomeChannelAPI {
             }
         }
     }
-
+    //////////////////////////////////////////////////////////////////////////
+    // Category
+    //////////////////////////////////////////////////////////////////////////
     func getCategories(params : Dictionary<String, Any> = [:],
                        success: @escaping (_ categories: [Category]) -> Void,
                        failure: ((_ error : Error) -> Void)? = nil ) -> Void {
@@ -112,6 +114,9 @@ public class MatomeChannelAPI {
         )
     }
 
+    //////////////////////////////////////////////////////////////////////////
+    // Board
+    //////////////////////////////////////////////////////////////////////////
     func getBoards(params : Dictionary<String, Any> = [:],
                    success: @escaping (_ boardList: BoardList) -> Void,
                    failure: ((_ error : Error) -> Void)? = nil ) -> Void {
@@ -130,6 +135,33 @@ public class MatomeChannelAPI {
                    failure: ((_ error : Error) -> Void)? = nil ) -> Void {
         let mapper = Mapper<Board>()
         request("/boards/\(id)",
+                params: params,
+                mapper: mapper,
+                success: success,
+                failure: failure
+        )
+    }
+
+    func createBoard(title: String,
+                     category_id: Int,
+                     name: String,
+                     content: String,
+                     params : Dictionary<String, Any> = [:],
+                     success: @escaping (_ board: Board) -> Void,
+                     failure: ((_ error : Error) -> Void)? = nil ) -> Void {
+        let mapper = Mapper<Board>()
+        let params = [
+            "board": [
+                "title": title,
+                "category_id": category_id,
+                "comments_attributes": [[
+                    "name": name,
+                    "content": content
+                ]]
+            ]
+        ] as [String : Any]
+        request("/boards",
+                method: .post,
                 params: params,
                 mapper: mapper,
                 success: success,

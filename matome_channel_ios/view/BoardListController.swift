@@ -59,6 +59,12 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
         )
     }
 
+    func openBoard(_ board: Board) {
+        selectedBoard = board
+        self.performSegue(withIdentifier: "showBoard", sender: self)
+    }
+
+    // segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showBoard" {
             let showBoard: ShowBoardViewController = segue.destination as! ShowBoardViewController
@@ -66,8 +72,10 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
         } else if segue.identifier == "category" {
             let categoryList: CategoryViewController = segue.destination as! CategoryViewController
             categoryList.selectedCategory = self.selectedCategory
+        } else if segue.identifier == "newBoard" {
+            let newBoard: NewBoardViewController = segue.destination as! NewBoardViewController
+            newBoard.selectedCategory = self.selectedCategory
         }
-        
     }
 
     // TableView delegate

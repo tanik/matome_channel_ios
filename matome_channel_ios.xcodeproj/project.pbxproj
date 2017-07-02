@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B3475EE1F03D64E00B418BC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3475ED1F03D64E00B418BC /* CategoryViewController.swift */; };
+		4B5BBA4C1F06D3FE00D05FD4 /* NewBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5BBA4B1F06D3FE00D05FD4 /* NewBoardViewController.swift */; };
 		4B8674441EFFD97200F49677 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8674431EFFD96E00F49677 /* AlamofireImage.framework */; };
 		4B8674461EFFDF6C00F49677 /* ShowBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8674451EFFDF6C00F49677 /* ShowBoardViewController.swift */; };
 		4B8674481EFFE3FE00F49677 /* CommentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8674471EFFE3FE00F49677 /* CommentCellView.swift */; };
@@ -109,6 +110,7 @@
 		251DB06517875DB8C45D3AAE /* Pods-matome_channel_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_ios/Pods-matome_channel_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		3C56A05DE997EE1C020941C1 /* Pods-matome_channel_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_iosTests/Pods-matome_channel_iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B3475ED1F03D64E00B418BC /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		4B5BBA4B1F06D3FE00D05FD4 /* NewBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBoardViewController.swift; sourceTree = "<group>"; };
 		4B8674451EFFDF6C00F49677 /* ShowBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowBoardViewController.swift; sourceTree = "<group>"; };
 		4B8674471EFFE3FE00F49677 /* CommentCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCellView.swift; sourceTree = "<group>"; };
 		4B8674491EFFE46100F49677 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				4B86745F1F0049FD00F49677 /* CommentImageCellView.swift */,
 				4B9814CF1EFD1DDB00945F5F /* BoardListController.swift */,
 				4B8674471EFFE3FE00F49677 /* CommentCellView.swift */,
+				4B5BBA4B1F06D3FE00D05FD4 /* NewBoardViewController.swift */,
 				4B3475ED1F03D64E00B418BC /* CategoryViewController.swift */,
 				4B8674451EFFDF6C00F49677 /* ShowBoardViewController.swift */,
 			);
@@ -686,6 +689,7 @@
 				4B86745C1F00144100F49677 /* BoardImage.swift in Sources */,
 				4B3475EE1F03D64E00B418BC /* CategoryViewController.swift in Sources */,
 				4B8674581F00072800F49677 /* Website.swift in Sources */,
+				4B5BBA4C1F06D3FE00D05FD4 /* NewBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
