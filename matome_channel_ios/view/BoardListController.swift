@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BoardListViewController.swift
 //  matome_channel_ios
 //
 //  Created by TanimotoKouichi on 2017/06/23.
@@ -66,19 +66,25 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
 
     // segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showBoard" {
+        let segue_id = segue.identifier ?? "nil"
+        switch(segue_id){
+        case "showBoard":
             let showBoard: ShowBoardViewController = segue.destination as! ShowBoardViewController
             showBoard.board = selectedBoard!
-        } else if segue.identifier == "category" {
+        case "category":
             let categoryList: CategoryViewController = segue.destination as! CategoryViewController
             categoryList.selectedCategory = self.selectedCategory
-        } else if segue.identifier == "newBoard" {
+        case "newBoard":
             let newBoard: NewBoardViewController = segue.destination as! NewBoardViewController
             newBoard.selectedCategory = self.selectedCategory
+        default:
+            print("unknown segue: \(segue_id)")
         }
     }
+}
 
-    // TableView delegate
+// TableView delegate
+extension BoardListViewController{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return boards.count
     }
@@ -87,7 +93,7 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell: BoardListCellView = tableView.dequeueReusableCell(withIdentifier: "board", for: indexPath as IndexPath) as! BoardListCellView
         cell.setCell(self.boards[indexPath.row])
         return cell
-        
+
     }
 
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
@@ -96,17 +102,19 @@ class BoardListViewController: UIViewController, UITableViewDelegate, UITableVie
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         tableView.deselectRow(at: indexPath, animated: false)
-        
-    }
 
-    // Search Bar delegate
+    }
+}
+
+// Search Bar delegate
+extension BoardListViewController{
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar){
         self.searchBar.endEditing(true)
         self.searchBar.isHidden = true
         getBoards()
     }
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
         getBoards()
     }
 }
-

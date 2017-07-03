@@ -59,9 +59,19 @@ class ShowBoardViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "newComment" {
+        let segue_id = segue.identifier ?? "nil"
+        switch(segue_id){
+        case "newComment":
             let newComment: NewCommentViewController = segue.destination as! NewCommentViewController
             newComment.board = self.board
+        case "boardWebsite":
+            let boardWebsite: BoardWebsiteViewController = segue.destination as! BoardWebsiteViewController
+            boardWebsite.board_websites = self.board?.board_websites ?? []
+        case "boardImage":
+            let boardImage: BoardImageViewController = segue.destination as! BoardImageViewController
+            boardImage.board_images = self.board?.board_images ?? []
+        default:
+            print("unknown segue: \(segue_id)")
         }
     }
 

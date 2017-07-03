@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4B3475EE1F03D64E00B418BC /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3475ED1F03D64E00B418BC /* CategoryViewController.swift */; };
+		4B4A04651F0A9D83003574DD /* BoardImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A04641F0A9D83003574DD /* BoardImageViewController.swift */; };
+		4B4A04711F0A9D97003574DD /* BoardWebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A04701F0A9D97003574DD /* BoardWebsiteViewController.swift */; };
+		4B4A04731F0AB5B7003574DD /* BoardWebsiteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A04721F0AB5B7003574DD /* BoardWebsiteCellView.swift */; };
+		4B4A04751F0ABE70003574DD /* BoardImageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4A04741F0ABE70003574DD /* BoardImageCellView.swift */; };
 		4B5BBA4C1F06D3FE00D05FD4 /* NewBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5BBA4B1F06D3FE00D05FD4 /* NewBoardViewController.swift */; };
 		4B80DF5A1F094EAC00C2B648 /* NewCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80DF591F094EAC00C2B648 /* NewCommentViewController.swift */; };
 		4B80DF631F09526D00C2B648 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B80DF621F09526D00C2B648 /* Alert.swift */; };
@@ -140,6 +144,10 @@
 		251DB06517875DB8C45D3AAE /* Pods-matome_channel_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_ios/Pods-matome_channel_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		3C56A05DE997EE1C020941C1 /* Pods-matome_channel_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-matome_channel_iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-matome_channel_iosTests/Pods-matome_channel_iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B3475ED1F03D64E00B418BC /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		4B4A04641F0A9D83003574DD /* BoardImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardImageViewController.swift; sourceTree = "<group>"; };
+		4B4A04701F0A9D97003574DD /* BoardWebsiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardWebsiteViewController.swift; sourceTree = "<group>"; };
+		4B4A04721F0AB5B7003574DD /* BoardWebsiteCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardWebsiteCellView.swift; sourceTree = "<group>"; };
+		4B4A04741F0ABE70003574DD /* BoardImageCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardImageCellView.swift; sourceTree = "<group>"; };
 		4B5BBA4B1F06D3FE00D05FD4 /* NewBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBoardViewController.swift; sourceTree = "<group>"; };
 		4B80DF591F094EAC00C2B648 /* NewCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentViewController.swift; sourceTree = "<group>"; };
 		4B80DF621F09526D00C2B648 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -234,14 +242,18 @@
 		4B86744C1F00021700F49677 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				4BF5466B1EFD9EF10083D100 /* BoardListCellView.swift */,
-				4B86745F1F0049FD00F49677 /* CommentImageCellView.swift */,
-				4B9814CF1EFD1DDB00945F5F /* BoardListController.swift */,
-				4B8674471EFFE3FE00F49677 /* CommentCellView.swift */,
-				4B5BBA4B1F06D3FE00D05FD4 /* NewBoardViewController.swift */,
-				4B80DF591F094EAC00C2B648 /* NewCommentViewController.swift */,
 				4B3475ED1F03D64E00B418BC /* CategoryViewController.swift */,
+				4B9814CF1EFD1DDB00945F5F /* BoardListController.swift */,
+				4BF5466B1EFD9EF10083D100 /* BoardListCellView.swift */,
+				4B5BBA4B1F06D3FE00D05FD4 /* NewBoardViewController.swift */,
+				4B8674471EFFE3FE00F49677 /* CommentCellView.swift */,
+				4B86745F1F0049FD00F49677 /* CommentImageCellView.swift */,
 				4B8674451EFFDF6C00F49677 /* ShowBoardViewController.swift */,
+				4B4A04641F0A9D83003574DD /* BoardImageViewController.swift */,
+				4B4A04741F0ABE70003574DD /* BoardImageCellView.swift */,
+				4B4A04701F0A9D97003574DD /* BoardWebsiteViewController.swift */,
+				4B4A04721F0AB5B7003574DD /* BoardWebsiteCellView.swift */,
+				4B80DF591F094EAC00C2B648 /* NewCommentViewController.swift */,
 			);
 			name = view;
 			path = "/Users/tanimoto/Working/m-ch/matome_channel_ios/matome_channel_ios/view";
@@ -749,14 +761,17 @@
 				4BF9C5381F0A7A4400B648A2 /* CommentWebsite.swift in Sources */,
 				4B8674461EFFDF6C00F49677 /* ShowBoardViewController.swift in Sources */,
 				4BF9C52C1F0A7A3600B648A2 /* CommentImage.swift in Sources */,
+				4B4A04651F0A9D83003574DD /* BoardImageViewController.swift in Sources */,
 				4B9814D01EFD1DDB00945F5F /* BoardListController.swift in Sources */,
 				4BF9C53C1F0A80D100B648A2 /* FavoriteBoard.swift in Sources */,
 				4BF5466C1EFD9EF10083D100 /* BoardListCellView.swift in Sources */,
 				4BD180FA1EFEEE8A000A4194 /* Board.swift in Sources */,
 				4BD180FC1EFEEE9A000A4194 /* Pagination.swift in Sources */,
+				4B4A04751F0ABE70003574DD /* BoardImageCellView.swift in Sources */,
 				4B86744A1EFFE46100F49677 /* Comment.swift in Sources */,
 				4B80DF631F09526D00C2B648 /* Alert.swift in Sources */,
 				4B8674601F0049FD00F49677 /* CommentImageCellView.swift in Sources */,
+				4B4A04711F0A9D97003574DD /* BoardWebsiteViewController.swift in Sources */,
 				4B86745A1F00073200F49677 /* Image.swift in Sources */,
 				4B86745E1F00145500F49677 /* BoardWebsite.swift in Sources */,
 				4B80DF5A1F094EAC00C2B648 /* NewCommentViewController.swift in Sources */,
@@ -767,6 +782,7 @@
 				4B8674621F01658800F49677 /* HasImage.swift in Sources */,
 				4B86744F1F00038F00F49677 /* Category.swift in Sources */,
 				4BF9C53A1F0A80C400B648A2 /* FavoriteComment.swift in Sources */,
+				4B4A04731F0AB5B7003574DD /* BoardWebsiteCellView.swift in Sources */,
 				4B86745C1F00144100F49677 /* BoardImage.swift in Sources */,
 				4B3475EE1F03D64E00B418BC /* CategoryViewController.swift in Sources */,
 				4B8674581F00072800F49677 /* Website.swift in Sources */,
