@@ -31,7 +31,7 @@ class NewBoardViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let name: String    = nameField.text!
         let content: String = contentField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if(title.characters.count == 0 || content.characters.count == 0){
-            self.showAlert("タイトルとコメントは１文字以上入力してください。")
+            Alert(self).show("タイトルとコメントは１文字以上入力してください。")
             return
         }
         MatomeChannelAPI().createBoard(
@@ -46,21 +46,8 @@ class NewBoardViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 boardListView.openBoard(board)
             })
         }, failure: { (error: Error) in
-            self.showAlert("エラーが発生しました。しばらくお待ちいただいてから再度お試しください。")
+            Alert(self).show("エラーが発生しました。しばらくお待ちいただいてから再度お試しください。")
         })
-    }
-    func showAlert(_ message: String){
-        let alert: UIAlertController = UIAlertController(
-            title: "エラー",
-            message: message,
-            preferredStyle:  .alert)
-        let defaultAction: UIAlertAction = UIAlertAction(
-            title: "OK",
-            style: .default,
-            handler:{ (action: UIAlertAction!) -> Void in }
-        )
-        alert.addAction(defaultAction)
-        self.present(alert, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {

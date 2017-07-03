@@ -99,6 +99,7 @@ public class MatomeChannelAPI {
             }
         }
     }
+
     //////////////////////////////////////////////////////////////////////////
     // Category
     //////////////////////////////////////////////////////////////////////////
@@ -169,6 +170,9 @@ public class MatomeChannelAPI {
         )
     }
 
+    //////////////////////////////////////////////////////////////////////////
+    // Comment
+    //////////////////////////////////////////////////////////////////////////
     func getBoardComments(_ board_id: Int,
                   lt_id: Int? = nil,
                   gt_id: Int? = nil,
@@ -187,6 +191,27 @@ public class MatomeChannelAPI {
             url = "/boards/\(board_id)/comments"
         }
         requestArray(url,
+            params: params,
+            mapper: mapper,
+            success: success,
+            failure: failure
+        )
+    }
+
+    func createComment(board_id: Int,
+                       name: String,
+                       content: String,
+                       success: @escaping (_ comment: Comment) -> Void,
+                       failure: ((_ error : Error) -> Void)? = nil ) -> Void {
+        let mapper = Mapper<Comment>()
+        let params = [
+            "comment": [
+                "name": name,
+                "content": content
+            ]
+        ] as [String : Any]
+        request("/boards/\(board_id)/comments",
+            method: .post,
             params: params,
             mapper: mapper,
             success: success,

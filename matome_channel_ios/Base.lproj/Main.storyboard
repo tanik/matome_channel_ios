@@ -161,7 +161,7 @@
                                                 <action selector="back:" destination="601-5q-Hne" id="xu7-94-adh"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="作成" id="wM6-tg-Ded">
+                                        <barButtonItem key="rightBarButtonItem" title="投稿" id="wM6-tg-Ded">
                                             <connections>
                                                 <action selector="post:" destination="601-5q-Hne" id="onY-DJ-buS"/>
                                             </connections>
@@ -261,6 +261,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s81-EY-tZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="925.18740629685169"/>
+        </scene>
+        <!--New Comment View Controller-->
+        <scene sceneID="8gI-US-VN8">
+            <objects>
+                <viewController id="kIl-IY-kdK" customClass="NewCommentViewController" customModule="matome_channel_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5YG-tn-6LX"/>
+                        <viewControllerLayoutGuide type="bottom" id="znk-Yq-DhE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tVD-RN-GIw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diz-8O-qOZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="コメント投稿" id="f7n-g5-4PG">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="igi-6I-7po">
+                                            <connections>
+                                                <action selector="back:" destination="kIl-IY-kdK" id="sjg-8S-kv3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="投稿" id="7zC-J6-y4I">
+                                            <connections>
+                                                <action selector="post:" destination="kIl-IY-kdK" id="f1u-Cl-WbA"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3o-CW-Um1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コメント" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlu-06-EQB">
+                                <rect key="frame" x="0.0" y="115" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名無しさん" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="paQ-Ve-3Q3">
+                                <rect key="frame" x="0.0" y="85" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4pA-dU-VnL">
+                                <rect key="frame" x="0.0" y="136" width="375" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <edgeInsets key="layoutMargins" top="2" left="2" bottom="2" right="2"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="znk-Yq-DhE" firstAttribute="top" secondItem="4pA-dU-VnL" secondAttribute="bottom" id="40c-3K-AUI"/>
+                            <constraint firstItem="diz-8O-qOZ" firstAttribute="leading" secondItem="tVD-RN-GIw" secondAttribute="leading" id="4bc-mh-1E6"/>
+                            <constraint firstItem="r3o-CW-Um1" firstAttribute="top" secondItem="diz-8O-qOZ" secondAttribute="bottom" id="5Bu-1H-Bx1"/>
+                            <constraint firstItem="4pA-dU-VnL" firstAttribute="leading" secondItem="tVD-RN-GIw" secondAttribute="leading" id="7q5-WQ-cVM"/>
+                            <constraint firstAttribute="trailing" secondItem="nlu-06-EQB" secondAttribute="trailing" id="JLH-X5-UE0"/>
+                            <constraint firstItem="nlu-06-EQB" firstAttribute="top" secondItem="paQ-Ve-3Q3" secondAttribute="bottom" id="QPf-VF-a59"/>
+                            <constraint firstAttribute="trailing" secondItem="diz-8O-qOZ" secondAttribute="trailing" id="R9A-oH-hUo"/>
+                            <constraint firstItem="paQ-Ve-3Q3" firstAttribute="leading" secondItem="tVD-RN-GIw" secondAttribute="leading" id="SDa-lC-p0j"/>
+                            <constraint firstAttribute="trailing" secondItem="paQ-Ve-3Q3" secondAttribute="trailing" id="V3r-sB-WQY"/>
+                            <constraint firstAttribute="trailing" secondItem="r3o-CW-Um1" secondAttribute="trailing" id="dk1-SL-aZB"/>
+                            <constraint firstItem="diz-8O-qOZ" firstAttribute="top" secondItem="5YG-tn-6LX" secondAttribute="bottom" id="idx-MB-5ny"/>
+                            <constraint firstItem="nlu-06-EQB" firstAttribute="leading" secondItem="tVD-RN-GIw" secondAttribute="leading" id="lAX-UA-yYZ"/>
+                            <constraint firstItem="4pA-dU-VnL" firstAttribute="top" secondItem="nlu-06-EQB" secondAttribute="bottom" id="nst-cf-DvG"/>
+                            <constraint firstAttribute="trailing" secondItem="4pA-dU-VnL" secondAttribute="trailing" id="pp1-Lb-0mh"/>
+                            <constraint firstItem="paQ-Ve-3Q3" firstAttribute="top" secondItem="r3o-CW-Um1" secondAttribute="bottom" id="pvG-oM-cGK"/>
+                            <constraint firstItem="r3o-CW-Um1" firstAttribute="leading" secondItem="tVD-RN-GIw" secondAttribute="leading" id="y4z-n2-Twd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentField" destination="4pA-dU-VnL" id="WAr-Re-nXg"/>
+                        <outlet property="nameField" destination="paQ-Ve-3Q3" id="agY-ef-dto"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCX-nS-vdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.5999999999999" y="938.68065967016503"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="XB3-0w-o1V">
@@ -466,7 +550,11 @@
                                             <action selector="refresh:" destination="WAt-Ai-8KP" id="l2b-it-Ma5"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="action" id="zcE-UY-73l"/>
+                                    <barButtonItem systemItem="action" id="zcE-UY-73l">
+                                        <connections>
+                                            <segue destination="kIl-IY-kdK" kind="show" identifier="newComment" id="fgI-mN-pff"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

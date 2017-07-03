@@ -9,8 +9,8 @@ target 'matome_channel_ios' do
   pod 'ObjectMapper', '~> 2.2'
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'AlamofireImage', '~> 3.1'
-
-  # Pods for matome_channel_ios
+  pod 'ActionCableClient'
+  pod 'SwiftyJSON'
 
   target 'matome_channel_iosTests' do
     inherit! :search_paths
